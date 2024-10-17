@@ -1,12 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
 const RenderRoot = (children: React.ReactNode): void => {
-	// biome-ignore lint/correctness/noVoidTypeReturn: <explanation>
-	// biome-ignore lint/style/noNonNullAssertion: <explanation>
-		return ReactDOM.createRoot(document.getElementById("root")!).render(
-		<React.StrictMode>{children}</React.StrictMode>,
-	);
-};
+  // biome-ignore lint/correctness/noVoidTypeReturn: <explanation>
+  return ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>{children}</React.StrictMode>
+  )
+}
 
-export { RenderRoot };
+export { RenderRoot }
