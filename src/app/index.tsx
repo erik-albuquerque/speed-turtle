@@ -3,7 +3,7 @@ import * as Lucide from 'lucide-react'
 import { useSpeedTurtle } from '../hooks/use-speed-turtle'
 
 const App = () => {
-  const { summary, isLoading, onPlay, onRestart, onPauseResume, errors } =
+  const { summary, isLoading, onPlay, onRestart, onPauseResume } =
     useSpeedTurtle()
 
   return (
@@ -46,13 +46,6 @@ const App = () => {
               )}
             </button>
           </div>
-
-          {errors.length > 0 &&
-            errors.map(error => (
-              <span key={error} className="text-red-500">
-                {error}
-              </span>
-            ))}
 
           {summary && (
             <div className="flex flex-col gap-4 mt-4">

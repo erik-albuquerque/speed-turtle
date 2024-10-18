@@ -1,6 +1,6 @@
+import { AppProvider } from '../providers/app-provider'
 import { RenderRoot } from '../components/render-root'
-import { App } from '../app'
 
 import './main.css'
 
-RenderRoot(<App />)
+RenderRoot(<AppProvider />)

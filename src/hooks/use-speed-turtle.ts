@@ -5,6 +5,7 @@ import { bytesToMegabytes } from '../utils/bytes-to-megabytes'
 
 import type { Results } from '@cloudflare/speedtest'
 import type { SummaryResponse } from '../@types/summary-response'
+import { toast } from 'sonner'
 
 const useSpeedTurtle = () => {
   const speedTurtleRef = useRef(
@@ -64,6 +65,8 @@ const useSpeedTurtle = () => {
     }
 
     const handleError = (error: string) => {
+      toast.error(error)
+
       setState(prev => ({
         ...prev,
         errors: prev.errors.includes(error)
