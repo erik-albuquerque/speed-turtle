@@ -6,7 +6,7 @@ const AppProvider = () => {
   return (
     <>
       <App />
-      <Toaster richColors theme="system" position="top-right" />
+      <Toaster richColors theme="system" position="bottom-right" />
     </>
   )
 }
