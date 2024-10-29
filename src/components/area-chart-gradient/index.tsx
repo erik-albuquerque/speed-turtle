@@ -21,7 +21,7 @@ type AreaChartGradientData = {
 
 const AreaChartGradient = ({ data }: AreaChartGradientData) => {
   return (
-    <Card className="mt-4 fixed w-full opacity-50 dark:opacity-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <Card className="-translate-x-1/2 -translate-y-1/2 fixed top-1/2 left-1/2 mt-4 w-full opacity-50 dark:opacity-20">
       <CardContent className="p-0">
         <ChartContainer config={chartConfig}>
           <AreaChart

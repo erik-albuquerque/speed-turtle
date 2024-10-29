@@ -81,6 +81,7 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
 
   return (
     <style
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
       dangerouslySetInnerHTML={{
         __html: Object.entries(THEMES)
           .map(
@@ -242,7 +243,7 @@ const ChartTooltipContent = React.forwardRef<
                         </span>
                       </div>
                       {item.value && (
-                        <span className="font-mono font-medium tabular-nums text-neutral-950 dark:text-neutral-50">
+                        <span className="font-medium font-mono text-neutral-950 tabular-nums dark:text-neutral-50">
                           {item.value.toLocaleString()}
                         </span>
                       )}
