@@ -14,7 +14,7 @@ const App = () => {
       <Header />
 
       <div className="relative flex flex-col items-center">
-        <div className="flex min-h-screen w-full flex-1 flex-col items-center pt-8 ">
+        <div className="flex w-full flex-1 flex-col items-center pt-8">
           <div className="flex gap-2">
             <Button
               type="button"
