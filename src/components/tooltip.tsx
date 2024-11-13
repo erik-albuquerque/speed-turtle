@@ -1,14 +1,17 @@
 import {
-  Tooltip as TooltipPrimitive,
-  TooltipTrigger,
-  TooltipContent,
-} from './ui/tooltip'
-import {
   Arrow as TooltipArrow,
   type TooltipProps,
   type TooltipContentProps,
   type TooltipTriggerProps,
 } from '@radix-ui/react-tooltip'
+
+import { cn } from '::/lib/utils'
+
+import {
+  Tooltip as TooltipPrimitive,
+  TooltipTrigger,
+  TooltipContent,
+} from './ui/tooltip'
 
 const TooltipCustomRoot = ({
   children,
@@ -16,14 +19,26 @@ const TooltipCustomRoot = ({
 }: TooltipProps & {
   children: React.ReactNode
 }) => {
-  return <TooltipPrimitive {...props}>{children}</TooltipPrimitive>
+  return (
+    <TooltipPrimitive delayDuration={250} {...props}>
+      {children}
+    </TooltipPrimitive>
+  )
 }
 
-const TooltipCustomContent = ({ children, ...props }: TooltipContentProps) => {
+const TooltipCustomContent = ({
+  children,
+  className = undefined,
+  ...props
+}: TooltipContentProps) => {
   return (
-    <TooltipContent {...props}>
+    <TooltipContent className={cn('bg-neutral-900', className)} {...props}>
       {children}
-      <TooltipArrow width={11} height={5} />
+      <TooltipArrow
+        className="fill-neutral-900 dark:fill-white"
+        width={11}
+        height={5}
+      />
     </TooltipContent>
   )
 }

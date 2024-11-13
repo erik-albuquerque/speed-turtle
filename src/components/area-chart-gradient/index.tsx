@@ -23,7 +23,7 @@ const AreaChartGradient = ({ data }: AreaChartGradientData) => {
     useTurtleAnimation({ data })
 
   return (
-    <Card className="-translate-x-1/2 -translate-y-1/2 fixed top-1/2 left-1/2 w-full opacity-50 xl:mt-16 dark:opacity-20">
+    <Card className="-translate-x-1/2 -translate-y-1/2 fixed top-2/3 left-1/2 w-full opacity-50 xl:mt-16 dark:opacity-20">
       <CardContent className="p-0">
         <ChartContainer
           config={chartConfig}
@@ -53,29 +53,13 @@ const AreaChartGradient = ({ data }: AreaChartGradientData) => {
             />
             <defs>
               <linearGradient id="download" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor={colors.green[500]}
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor={colors.green[500]}
-                  stopOpacity={0.1}
-                />
+                <stop offset="5%" stopColor="#28a745" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#28a745" stopOpacity={0.1} />
               </linearGradient>
 
               <linearGradient id="upload" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor={colors.orange[500]}
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor={colors.orange[500]}
-                  stopOpacity={0.1}
-                />
+                <stop offset="5%" stopColor="#1e90ff" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#1e90ff" stopOpacity={0.1} />
               </linearGradient>
             </defs>
 
@@ -83,7 +67,7 @@ const AreaChartGradient = ({ data }: AreaChartGradientData) => {
               dataKey="download"
               type="monotone"
               fill="url(#download)"
-              stroke={colors.green[500]}
+              stroke="#28a745"
               fillOpacity={0.4}
               ref={areaRef}
             />
@@ -92,7 +76,7 @@ const AreaChartGradient = ({ data }: AreaChartGradientData) => {
               dataKey="upload"
               type="monotone"
               fill="url(#upload)"
-              stroke={colors.orange[500]}
+              stroke="#1e90ff"
               fillOpacity={0.4}
             />
 

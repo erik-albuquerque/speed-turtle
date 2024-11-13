@@ -32,7 +32,7 @@ const speedTurtleReducer = (
           : [...state.errors, payload],
       }
     case ACTIONS.SET_SUMMARY:
-      return { ...state, summary: payload }
+      return { ...state, summary: payload as SummaryResponse }
     case ACTIONS.ADD_CHART_DATA:
       return { ...state, chartData: [...state.chartData, payload] }
     case ACTIONS.RESET:

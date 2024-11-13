@@ -31,10 +31,13 @@ const useSpeedTurtle = () => {
 
   const formatSummary = useCallback(
     (summary: SummaryResponse) => ({
-      download: bytesToMegabytes(summary.download || 0),
-      upload: bytesToMegabytes(summary.upload || 0),
-      latency: Number(summary.latency?.toFixed(1) || 0),
-      jitter: Number(summary.jitter?.toFixed(1) || 0),
+      download: summary.download ? bytesToMegabytes(summary?.download) : 0,
+      upload: bytesToMegabytes(summary?.upload || 0),
+      latency: Number(summary?.latency?.toFixed(1) || 0),
+      jitter: Number(summary?.jitter?.toFixed(1) || 0),
+      downLoadedLatency: Number(summary?.downLoadedLatency?.toFixed(1) || 0),
+      upLoadedLatency: Number(summary?.upLoadedLatency?.toFixed(1) || 0),
+      packetLoss: Number(summary?.packetLoss?.toExponential(1) || 0),
     }),
     []
   )
