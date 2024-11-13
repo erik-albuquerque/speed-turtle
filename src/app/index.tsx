@@ -5,8 +5,11 @@ import { AreaChartGradient } from '::/components/area-chart-gradient'
 import { MeasurementMetrics } from '::/components/measurement-metrics'
 import { Measurements } from '::/components/measurements'
 import { StartButton } from '::/components/start-button'
+import { useUpdateFavicon } from '::/hooks/use-update-favicon'
 
 const App = () => {
+  useUpdateFavicon()
+
   const { summary, isLoading, onPlay, chartData } = useSpeedTurtle()
 
   return (
