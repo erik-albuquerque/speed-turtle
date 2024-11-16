@@ -1,29 +1,45 @@
-import type { LucideProps } from 'lucide-react'
-import { Tooltip } from '::/components/tooltip'
+import { useCallback } from 'react'
+import { type AnimationControls, useAnimation } from 'framer-motion'
 import { cn } from '::/lib/utils'
+import { Tooltip } from '::/components/tooltip'
 import { EmptyDots } from './empty-dots'
 
 type MetricCardProps = {
   label: string
-  icon: React.ForwardRefExoticComponent<
-    Omit<LucideProps, 'ref'> & React.RefAttributes<SVGSVGElement>
+  icon: React.FC<
+    { controls: AnimationControls } & React.ComponentPropsWithoutRef<'div'>
   >
   value?: number
   unit?: string
 }
 
 const MetricCard = ({ icon: Icon, ...metrics }: MetricCardProps) => {
+  const controls = useAnimation()
+  const isDisabled = !metrics.value
+
   const actionType = metrics.label.toLowerCase().replace(' ', '')
+
+  const handleAnimation = useCallback(
+    (animationName: 'animate' | 'normal') => {
+      if (!isDisabled) {
+        controls.start(animationName)
+      }
+    },
+    [isDisabled, controls]
+  )
 
   return (
     <Tooltip.Root>
       <Tooltip.Trigger>
         <div
-          data-disabled={!metrics.value}
+          data-disabled={isDisabled}
           data-action={actionType}
           className="group flex items-center gap-1"
+          onMouseEnter={() => handleAnimation('animate')}
+          onMouseLeave={() => handleAnimation('normal')}
         >
           <Icon
+            controls={controls}
             className={cn(
               'size-4 group-data-[disabled=true]:text-neutral-300',
               'dark:group-data-[disabled=true]:text-neutral-600',

@@ -37,7 +37,7 @@ const useSpeedTurtle = () => {
       jitter: Number(summary?.jitter?.toFixed(1) || 0),
       downLoadedLatency: Number(summary?.downLoadedLatency?.toFixed(1) || 0),
       upLoadedLatency: Number(summary?.upLoadedLatency?.toFixed(1) || 0),
-      packetLoss: Number(summary?.packetLoss?.toExponential(1) || 0),
+      packetLoss: Number(summary?.packetLoss?.toFixed(1) || 0),
     }),
     []
   )

@@ -1,6 +1,10 @@
-import * as Lucide from 'lucide-react'
 import { MetricCard } from './metric-card'
 import type { SummaryResponse } from '::/@types/summary-response'
+import { ArrowDown } from './animated-icons/arrow-down'
+import { ArrowUp } from './animated-icons/arrow-up'
+import { ChevronsLeftRight } from './animated-icons/chevrons-left-right'
+import { Zap } from './animated-icons/zap'
+import { PackageX } from './animated-icons/package-x'
 
 type MeasurementMetricsProps = {
   summary: SummaryResponse | null
@@ -8,24 +12,24 @@ type MeasurementMetricsProps = {
 
 const MeasurementMetrics = ({ summary }: MeasurementMetricsProps) => {
   const metrics = [
-    { label: 'Latency', icon: Lucide.ArrowLeftRight, value: summary?.latency },
+    { label: 'Latency', icon: ChevronsLeftRight, value: summary?.latency },
     {
       label: 'Download Latency',
-      icon: Lucide.ArrowDown,
+      icon: ArrowDown,
       value: summary?.downLoadedLatency,
     },
     {
       label: 'Upload Latency',
-      icon: Lucide.ArrowUp,
+      icon: ArrowUp,
       value: summary?.upLoadedLatency,
     },
     {
       label: 'Packet Loss',
-      icon: Lucide.PackageX,
+      icon: PackageX,
       value: summary?.packetLoss,
       unit: '%',
     },
-    { label: 'Jitter', icon: Lucide.PlugZap, value: summary?.jitter },
+    { label: 'Jitter', icon: Zap, value: summary?.jitter },
   ]
 
   return (
