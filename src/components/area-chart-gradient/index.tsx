@@ -1,7 +1,5 @@
 import { Area, AreaChart, XAxis } from 'recharts'
 
-import colors from 'tailwindcss/colors'
-
 import { Card, CardContent } from '::/components/ui/card'
 import {
   ChartContainer,
@@ -13,6 +11,7 @@ import type { ChartData } from '::/@types/chart-data'
 import { chartConfig } from './chart-config'
 import { CustomTooltipContent } from './custom-tooltip-content'
 import { useTurtleAnimation } from '::/hooks/useTurtleAnimation'
+import type { AsTempAreaRefType } from '::/@types/as-temp-area-ref'
 
 type AreaChartGradientData = {
   data: ChartData
@@ -69,7 +68,12 @@ const AreaChartGradient = ({ data }: AreaChartGradientData) => {
               fill="url(#download)"
               stroke="#28a745"
               fillOpacity={0.4}
-              ref={areaRef}
+              /**
+               * I'm sorry. This is the only way I've found to fix this kind of
+               * error.
+               * FIXME: Please. Fix this error type!
+               */
+              ref={areaRef as AsTempAreaRefType}
             />
 
             <Area
