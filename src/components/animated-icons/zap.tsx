@@ -48,9 +48,9 @@ const Zap = ({
         viewBox="6 0 15 15"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <title>Zap</title>
         <motion.path
