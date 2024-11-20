@@ -22,7 +22,7 @@ const AreaChartGradient = ({ data }: AreaChartGradientData) => {
     useTurtleAnimation({ data })
 
   return (
-    <Card className="-translate-x-1/2 -translate-y-1/2 fixed top-2/3 left-1/2 w-full opacity-50 xl:mt-16 dark:opacity-20">
+    <Card className="-translate-x-1/2 -translate-y-1/2 fixed top-2/3 left-1/2 w-full opacity-50 xl:mt-16">
       <CardContent className="p-0">
         <ChartContainer
           config={chartConfig}

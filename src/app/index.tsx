@@ -6,6 +6,7 @@ import { MeasurementMetrics } from '::/components/measurement-metrics'
 import { Measurements } from '::/components/measurements'
 import { StartButton } from '::/components/start-button'
 import { useUpdateFavicon } from '::/hooks/use-update-favicon'
+import { SpeedTestWarning } from '::/components/speed-test-warning'
 
 const App = () => {
   useUpdateFavicon()
@@ -17,7 +18,7 @@ const App = () => {
       <Header />
 
       <div className="flex flex-col items-center">
-        <div className="flex flex-col items-center gap-4">
+        <div className="z-10 flex flex-col items-center gap-4">
           <div className="mt-2 flex flex-col items-center gap-4">
             <Measurements summary={summary} />
 
@@ -28,6 +29,8 @@ const App = () => {
         </div>
 
         <AreaChartGradient data={chartData} />
+
+        <SpeedTestWarning />
       </div>
     </main>
   )
