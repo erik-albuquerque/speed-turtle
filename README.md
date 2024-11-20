@@ -3,10 +3,10 @@
   <h1 align="center" id="project_name">Speed Turtle</h1>
   <p align="center">
     <a href="">
-      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/erik-albuquerque/speed-turtle?color=%235965E0">
+      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/erik-albuquerque/speed-turtle?color=%E7F5EA">
     </a>
-    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/erik-albuquerque/speed-turtle?color=%235965E0">
-    <img alt="License" src="https://img.shields.io/github/license/erik-albuquerque/speed-turtle?color=%235965E0">
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/erik-albuquerque/speed-turtle?color=%E7F5EA">
+    <img alt="License" src="https://img.shields.io/github/license/erik-albuquerque/speed-turtle?color=%E7F5EA">
   </p>
 </p>
 
@@ -28,14 +28,13 @@ The following tools were used to build the project:
 - **[Tailwindcss](https://tailwindcss.com/)**
 - **[Shadcn](https://ui.shadcn.com/)**
 
-> See the file [package.json](https://github.com/erik-albuquerque/speed-turtle/package.json>)
+> See the file [package.json](https://github.com/erik-albuquerque/speed-turtle/package.json)
 
 ### Utilities
 
 - Lib: **[@cloudflare/speedtest](https://www.npmjs.com/package/@cloudflare/speedtest)**
 - Editor: **[Visual Studio Code](https://code.visualstudio.com/)**
 - Icons: **[Lucide icons](https://lucide.dev/)**
-- Fonts: **[Font 1](https://example.com)**
 
 ## 💿 How to Run
 
@@ -88,5 +87,3 @@ Distributed under the MIT License. See the [LICENSE](LICENSE) for more informati
 Made with ❤️ by Érik Albuquerque 👋🏽 [Get in touch!](https://www.linkedin.com/in/erik-albuquerque/)
 
 [⬆ Back to top](#project_name)
-
-> Choose your language: [🇧🇷](README.md) [🇺🇸](README%20English.md)
