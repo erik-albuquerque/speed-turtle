@@ -2,9 +2,7 @@
 <img src=".github/logo.svg" alt="Logo" height="128">
   <h1 align="center" id="project_name">Speed Turtle</h1>
   <p align="center">
-    <a href="">
-      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/erik-albuquerque/speed-turtle?color=%E7F5EA">
-    </a>
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/erik-albuquerque/speed-turtle?color=%E7F5EA">
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/erik-albuquerque/speed-turtle?color=%E7F5EA">
     <img alt="License" src="https://img.shields.io/github/license/erik-albuquerque/speed-turtle?color=%E7F5EA">
   </p>
